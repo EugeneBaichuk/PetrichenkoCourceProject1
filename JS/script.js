@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
 
@@ -8,19 +8,54 @@ const personalMovieDB = {
   movies: {},
   actors: {},
   genres: [],
-  privat: false 
+  privat: false
 };
 
-  const film = prompt('Один из последних просмотренных фильмов?', ''),
-        rating = prompt('На сколько оцените его?', ''),
-        film1 = prompt('Один из последних просмотренных фильмов?', ''),
-        rating1 = prompt('На сколько оцените его?', '');
+for (let i = 0; i < 2; i++) {
+  const a = prompt('Один из последних просмотренных фильмов?', '');
+  const b = prompt('На сколько оцените его?', '');
 
-personalMovieDB.movies[film] = rating;
-personalMovieDB.movies[film1] = rating1;
+  if (a != "" && b != "" && a != null && b != null && a.length <= 50 && b.length <= 50) {
+    personalMovieDB.movies[a] = b;
+  } else {
+    i--;
+  }
+}
+let i = 0;
+while (i < 2) {
+  const a = prompt('Один из последних просмотренных фильмов?', '');
+  const b = prompt('На сколько оцените его?', '');
+  i++;
+  if (a != "" && b != "" && a != null && b != null && a.length <= 50 && b.length <= 50) {
+    personalMovieDB.movies[a] = b;
+  } else {
+    i--;
+  }
+}
 
-console.log (personalMovieDB);
+let i = 0;
+do {
+  const a = prompt('Один из последних просмотренных фильмов?', '');
+  const b = prompt('На сколько оцените его?', '');
+  i++;
+  if (a != "" && b != "" && a != null && b != null && a.length <= 50 && b.length <= 50) {
+    personalMovieDB.movies[a] = b;
+  } else {
+    i--;
+  }
+}
+while (i < 2);
 
+console.log(personalMovieDB);
 
+if (personalMovieDB.count < 10) {
+  console.log('Просмотрено слишком мало фильмов');
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 50) {
+  console.log('Вы классический зритель');
+} else if (personalMovieDB.count >= 10) {
+  console.log('Вы киноман');
+}*/
 
+const logg = 'Hello world';
 
+console.log(logg.slice(6, 10));
